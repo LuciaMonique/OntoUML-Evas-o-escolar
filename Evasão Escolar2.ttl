@@ -1,0 +1,304 @@
+@prefix : <http://evasao.com#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://evasao.com> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:Pessoa rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Pessoa"@en.
+:Aluno rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Aluno"@en.
+:Pai rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Pai"@en.
+:Me rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "M�e"@en.
+:Responsvel rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Respons�vel"@en.
+:Renda rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:IntrinsicMode;
+    rdfs:label "Renda"@en.
+:EstadoCivil rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:IntrinsicMode;
+    rdfs:label "Estado civil"@en.
+:Gnero rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "G�nero"@en.
+:Idade rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Idade"@en.
+:Raa rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Ra�a"@en.
+:Compromisso rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Compromisso"@en.
+:Objetivos rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Objetivos"@en.
+:IES rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "IES"@en.
+:Curso rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Curso"@en.
+:Turno rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Turno"@en.
+:rea rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:IntrinsicMode;
+    rdfs:label "�rea"@en.
+:Matricula rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Matricula"@en.
+:SituaoDaMatricula rdf:type owl:Class, gufo:Phase, owl:NamedIndividual;
+    rdfs:label "Situa��o da Matricula"@en.
+:ModalidadeDeEnsino rdf:type owl:Class, gufo:PhaseMixin, owl:NamedIndividual;
+    rdfs:subClassOf gufo:IntrinsicMode;
+    rdfs:label "Modalidade de ensino"@en.
+:FormaDeIngresso rdf:type owl:Class, gufo:Mixin, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Forma de Ingresso"@en.
+:Professor rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Professor"@en.
+:EstruturaOrganizacional rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Estrutura Organizacional"@en.
+:FatoresExternos rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Fatores Externos"@en.
+:CondiesEcnomicas rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quantity;
+    rdfs:label "Condi��es Ec�nomicas"@en.
+:ApoioFamiliar rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Apoio Familiar"@en.
+:Universidade rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Universidade"@en.
+:ExignciasDeTrabalho rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quantity;
+    rdfs:label "Exig�ncias de Trabalho"@en.
+:EvasoEscolar rdf:type owl:Class, gufo:Mixin, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Evas�o Escolar"@en.
+:TempoDeEstudo rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Tempo de estudo"@en.
+:Infraestrutura rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Infraestrutura"@en.
+:Aluno rdfs:subClassOf :Pessoa.
+:Pai rdfs:subClassOf :Responsvel.
+:Me rdfs:subClassOf :Responsvel.
+:Compromisso rdfs:subClassOf :Aluno.
+:Objetivos rdfs:subClassOf :Aluno.
+:Professor rdfs:subClassOf :Curso.
+:SituaoDaMatricula rdfs:subClassOf :Matricula.
+:pessoaHasResponsvel rdf:type owl:ObjectProperty;
+    rdfs:domain :Pessoa;
+    rdfs:range :Responsvel;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Pessoa;
+    rdfs:domain :Responsvel.
+:rendaHistoricallyDependsOnPessoa rdf:type owl:ObjectProperty;
+    rdfs:domain :Renda;
+    rdfs:range :Pessoa;
+    rdfs:subPropertyOf gufo:historicallyDependsOn;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Renda;
+    rdfs:domain :Pessoa;
+    rdfs:subPropertyOf <gufoi:hasHistoricalDependee>.
+:estadoCivilInheresInPessoa rdf:type owl:ObjectProperty;
+    rdfs:domain :EstadoCivil;
+    rdfs:range :Pessoa;
+    rdfs:subPropertyOf gufo:inheresIn;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :EstadoCivil;
+    rdfs:domain :Pessoa;
+    rdfs:subPropertyOf <gufoi:bears>.
+:gneroInheresInPessoa rdf:type owl:ObjectProperty;
+    rdfs:domain :Gnero;
+    rdfs:range :Pessoa;
+    rdfs:subPropertyOf gufo:inheresIn;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Gnero;
+    rdfs:domain :Pessoa;
+    rdfs:subPropertyOf <gufoi:bears>.
+:idadeInheresInPessoa rdf:type owl:ObjectProperty;
+    rdfs:domain :Idade;
+    rdfs:range :Pessoa;
+    rdfs:subPropertyOf gufo:inheresIn;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Idade;
+    rdfs:domain :Pessoa;
+    rdfs:subPropertyOf <gufoi:bears>.
+:raaHasPessoa rdf:type owl:ObjectProperty;
+    rdfs:domain :Raa;
+    rdfs:range :Pessoa;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Raa;
+    rdfs:domain :Pessoa.
+:turnoInheresInCurso rdf:type owl:ObjectProperty;
+    rdfs:domain :Turno;
+    rdfs:range :Curso;
+    rdfs:subPropertyOf gufo:inheresIn;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Turno;
+    rdfs:domain :Curso;
+    rdfs:subPropertyOf <gufoi:bears>.
+:iesHasMatricula rdf:type owl:ObjectProperty;
+    rdfs:domain :IES;
+    rdfs:range :Matricula;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :IES;
+    rdfs:domain :Matricula.
+:matriculaHistoricallyDependsOnAluno rdf:type owl:ObjectProperty;
+    rdfs:domain :Matricula;
+    rdfs:range :Aluno;
+    rdfs:subPropertyOf gufo:historicallyDependsOn;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Matricula;
+    rdfs:domain :Aluno;
+    rdfs:subPropertyOf <gufoi:hasHistoricalDependee>.
+:modalidadeDeEnsinoHasIes rdf:type owl:ObjectProperty;
+    rdfs:domain :ModalidadeDeEnsino;
+    rdfs:range :IES;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :ModalidadeDeEnsino;
+    rdfs:domain :IES.
+:cursoHasEstruturaOrganizacional rdf:type owl:ObjectProperty;
+    rdfs:domain :Curso;
+    rdfs:range :EstruturaOrganizacional;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Curso;
+    rdfs:domain :EstruturaOrganizacional.
+:iesHasEstruturaOrganizacional rdf:type owl:ObjectProperty;
+    rdfs:domain :IES;
+    rdfs:range :EstruturaOrganizacional;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :IES;
+    rdfs:domain :EstruturaOrganizacional.
+:formaDeIngressoHasMatricula rdf:type owl:ObjectProperty;
+    rdfs:domain :FormaDeIngresso;
+    rdfs:range :Matricula;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :FormaDeIngresso;
+    rdfs:domain :Matricula.
+:cursoHasrea rdf:type owl:ObjectProperty;
+    rdfs:domain :Curso;
+    rdfs:range :rea;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Curso;
+    rdfs:domain :rea.
+:fatoresExternosHasAluno rdf:type owl:ObjectProperty;
+    rdfs:domain :FatoresExternos;
+    rdfs:range :Aluno;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :FatoresExternos;
+    rdfs:domain :Aluno.
+:apoioFamiliarHasFatoresExternos rdf:type owl:ObjectProperty;
+    rdfs:domain :ApoioFamiliar;
+    rdfs:range :FatoresExternos;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :ApoioFamiliar;
+    rdfs:domain :FatoresExternos.
+:tempoDeEstudoHasFatoresExternos rdf:type owl:ObjectProperty;
+    rdfs:domain :TempoDeEstudo;
+    rdfs:range :FatoresExternos;
+    rdf:type gufo:ComparativeRelationshipType, owl:ObjectProperty;
+    rdfs:range :TempoDeEstudo;
+    rdfs:domain :FatoresExternos;
+    rdf:type gufo:ComparativeRelationshipType.
+:exignciasDeTrabalhoHasFatoresExternos rdf:type owl:ObjectProperty;
+    rdfs:domain :ExignciasDeTrabalho;
+    rdfs:range :FatoresExternos;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :ExignciasDeTrabalho;
+    rdfs:domain :FatoresExternos.
+:condiesEcnomicasHasFatoresExternos rdf:type owl:ObjectProperty;
+    rdfs:domain :CondiesEcnomicas;
+    rdfs:range :FatoresExternos;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :CondiesEcnomicas;
+    rdfs:domain :FatoresExternos.
+:alunoHasEvasoEscolar rdf:type owl:ObjectProperty;
+    rdfs:domain :Aluno;
+    rdfs:range :EvasoEscolar;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Aluno;
+    rdfs:domain :EvasoEscolar.
+:evasoEscolarHasUniversidade rdf:type owl:ObjectProperty;
+    rdfs:domain :EvasoEscolar;
+    rdfs:range :Universidade;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :EvasoEscolar;
+    rdfs:domain :Universidade.
+:infraestruturaHasUniversidade rdf:type owl:ObjectProperty;
+    rdfs:domain :Infraestrutura;
+    rdfs:range :Universidade;
+    rdf:type owl:ObjectProperty;
+    rdfs:range :Infraestrutura;
+    rdfs:domain :Universidade.
+:Renda rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :rendaHistoricallyDependsOnPessoa;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Pessoa
+].
+:Pessoa rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :estadoCivilInheresInPessoa;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :EstadoCivil
+].
+:EstadoCivil rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :estadoCivilInheresInPessoa;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Pessoa
+].
+:Pessoa rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :gneroInheresInPessoa;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Gnero
+].
+:Gnero rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :gneroInheresInPessoa;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Pessoa
+].
+:Pessoa rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :idadeInheresInPessoa;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Idade
+].
+:Idade rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :idadeInheresInPessoa;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Pessoa
+].
+:Curso rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :turnoInheresInCurso;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Turno
+].
+:Turno rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :turnoInheresInCurso;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Curso
+].
+:Matricula rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty :matriculaHistoricallyDependsOnAluno;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Aluno
+].

@@ -1,0 +1,963 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://evasao.com#"
+     xml:base="http://evasao.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:gufo="http://purl.org/nemo/gufo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://evasao.com">
+        <owl:imports rdf:resource="http://purl.org/nemo/gufo#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minQualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minQualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://evasao.com#alunoHasEvasoEscolar -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#alunoHasEvasoEscolar">
+        <rdfs:domain rdf:resource="http://evasao.com#Aluno"/>
+        <rdfs:range rdf:resource="http://evasao.com#EvasoEscolar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#apoioFamiliarHasFatoresExternos -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#apoioFamiliarHasFatoresExternos">
+        <rdfs:domain rdf:resource="http://evasao.com#ApoioFamiliar"/>
+        <rdfs:range rdf:resource="http://evasao.com#FatoresExternos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#condiesEcnomicasHasFatoresExternos -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#condiesEcnomicasHasFatoresExternos">
+        <rdfs:domain rdf:resource="http://evasao.com#CondiesEcnomicas"/>
+        <rdfs:range rdf:resource="http://evasao.com#FatoresExternos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#cursoHasEstruturaOrganizacional -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#cursoHasEstruturaOrganizacional">
+        <rdfs:domain rdf:resource="http://evasao.com#Curso"/>
+        <rdfs:range rdf:resource="http://evasao.com#EstruturaOrganizacional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#cursoHasrea -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#cursoHasrea">
+        <rdfs:domain rdf:resource="http://evasao.com#Curso"/>
+        <rdfs:range rdf:resource="http://evasao.com#rea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#evasoEscolarHasUniversidade -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#evasoEscolarHasUniversidade">
+        <rdfs:domain rdf:resource="http://evasao.com#EvasoEscolar"/>
+        <rdfs:range rdf:resource="http://evasao.com#Universidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#exignciasDeTrabalhoHasFatoresExternos -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#exignciasDeTrabalhoHasFatoresExternos">
+        <rdfs:domain rdf:resource="http://evasao.com#ExignciasDeTrabalho"/>
+        <rdfs:range rdf:resource="http://evasao.com#FatoresExternos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#fatoresExternosHasAluno -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#fatoresExternosHasAluno">
+        <rdfs:domain rdf:resource="http://evasao.com#FatoresExternos"/>
+        <rdfs:range rdf:resource="http://evasao.com#Aluno"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#formaDeIngressoHasMatricula -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#formaDeIngressoHasMatricula">
+        <rdfs:domain rdf:resource="http://evasao.com#FormaDeIngresso"/>
+        <rdfs:range rdf:resource="http://evasao.com#Matricula"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#iesHasEstruturaOrganizacional -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#iesHasEstruturaOrganizacional">
+        <rdfs:domain rdf:resource="http://evasao.com#IES"/>
+        <rdfs:range rdf:resource="http://evasao.com#EstruturaOrganizacional"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#iesHasMatricula -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#iesHasMatricula">
+        <rdfs:domain rdf:resource="http://evasao.com#IES"/>
+        <rdfs:range rdf:resource="http://evasao.com#Matricula"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#infraestruturaHasUniversidade -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#infraestruturaHasUniversidade">
+        <rdfs:domain rdf:resource="http://evasao.com#Infraestrutura"/>
+        <rdfs:range rdf:resource="http://evasao.com#Universidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#modalidadeDeEnsinoHasIes -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#modalidadeDeEnsinoHasIes">
+        <rdfs:domain rdf:resource="http://evasao.com#ModalidadeDeEnsino"/>
+        <rdfs:range rdf:resource="http://evasao.com#IES"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#pessoaHasResponsvel -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#pessoaHasResponsvel">
+        <rdfs:domain rdf:resource="http://evasao.com#Pessoa"/>
+        <rdfs:range rdf:resource="http://evasao.com#Responsvel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#raaHasPessoa -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#raaHasPessoa">
+        <rdfs:domain rdf:resource="http://evasao.com#Raa"/>
+        <rdfs:range rdf:resource="http://evasao.com#Pessoa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://evasao.com#tempoDeEstudoHasFatoresExternos -->
+
+    <owl:ObjectProperty rdf:about="http://evasao.com#tempoDeEstudoHasFatoresExternos">
+        <rdfs:domain rdf:resource="http://evasao.com#TempoDeEstudo"/>
+        <rdfs:range rdf:resource="http://evasao.com#FatoresExternos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#inheresIn -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nemo/gufo#inheresIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://evasao.com#Aluno -->
+
+    <owl:Class rdf:about="http://evasao.com#Aluno">
+        <rdfs:subClassOf rdf:resource="http://evasao.com#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#ApoioFamiliar -->
+
+    <owl:Class rdf:about="http://evasao.com#ApoioFamiliar">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Compromisso -->
+
+    <owl:Class rdf:about="http://evasao.com#Compromisso">
+        <rdfs:subClassOf rdf:resource="http://evasao.com#Aluno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#CondiesEcnomicas -->
+
+    <owl:Class rdf:about="http://evasao.com#CondiesEcnomicas">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Curso -->
+
+    <owl:Class rdf:about="http://evasao.com#Curso">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://evasao.com#Turno"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#EstadoCivil -->
+
+    <owl:Class rdf:about="http://evasao.com#EstadoCivil">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://evasao.com#Pessoa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#EstruturaOrganizacional -->
+
+    <owl:Class rdf:about="http://evasao.com#EstruturaOrganizacional">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#EvasoEscolar -->
+
+    <owl:Class rdf:about="http://evasao.com#EvasoEscolar">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#ExignciasDeTrabalho -->
+
+    <owl:Class rdf:about="http://evasao.com#ExignciasDeTrabalho">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#FatoresExternos -->
+
+    <owl:Class rdf:about="http://evasao.com#FatoresExternos">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#FormaDeIngresso -->
+
+    <owl:Class rdf:about="http://evasao.com#FormaDeIngresso">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Gnero -->
+
+    <owl:Class rdf:about="http://evasao.com#Gnero">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://evasao.com#Pessoa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#IES -->
+
+    <owl:Class rdf:about="http://evasao.com#IES">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Idade -->
+
+    <owl:Class rdf:about="http://evasao.com#Idade">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://evasao.com#Pessoa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Infraestrutura -->
+
+    <owl:Class rdf:about="http://evasao.com#Infraestrutura">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Matricula -->
+
+    <owl:Class rdf:about="http://evasao.com#Matricula">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Me -->
+
+    <owl:Class rdf:about="http://evasao.com#Me">
+        <rdfs:subClassOf rdf:resource="http://evasao.com#Responsvel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#ModalidadeDeEnsino -->
+
+    <owl:Class rdf:about="http://evasao.com#ModalidadeDeEnsino">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Objetivos -->
+
+    <owl:Class rdf:about="http://evasao.com#Objetivos">
+        <rdfs:subClassOf rdf:resource="http://evasao.com#Aluno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Pai -->
+
+    <owl:Class rdf:about="http://evasao.com#Pai">
+        <rdfs:subClassOf rdf:resource="http://evasao.com#Responsvel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Pessoa -->
+
+    <owl:Class rdf:about="http://evasao.com#Pessoa">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://evasao.com#EstadoCivil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://evasao.com#Gnero"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://evasao.com#Idade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Professor -->
+
+    <owl:Class rdf:about="http://evasao.com#Professor">
+        <rdfs:subClassOf rdf:resource="http://evasao.com#Curso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Raa -->
+
+    <owl:Class rdf:about="http://evasao.com#Raa">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Renda -->
+
+    <owl:Class rdf:about="http://evasao.com#Renda">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Responsvel -->
+
+    <owl:Class rdf:about="http://evasao.com#Responsvel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Relator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#SituaoDaMatricula -->
+
+    <owl:Class rdf:about="http://evasao.com#SituaoDaMatricula">
+        <rdfs:subClassOf rdf:resource="http://evasao.com#Matricula"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#TempoDeEstudo -->
+
+    <owl:Class rdf:about="http://evasao.com#TempoDeEstudo">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Turno -->
+
+    <owl:Class rdf:about="http://evasao.com#Turno">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#Quality"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/nemo/gufo#inheresIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://evasao.com#Curso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#Universidade -->
+
+    <owl:Class rdf:about="http://evasao.com#Universidade">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://evasao.com#rea -->
+
+    <owl:Class rdf:about="http://evasao.com#rea">
+        <rdfs:subClassOf rdf:resource="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Category -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Category"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#ComparativeRelationshipType -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#ComparativeRelationshipType"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#FunctionalComplex -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#FunctionalComplex"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#IntrinsicMode -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Kind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Kind"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Mixin -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Mixin"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Phase -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Phase"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#PhaseMixin -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#PhaseMixin"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Quality -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Quality"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Quantity -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Quantity"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Relator -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Relator"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#Role -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#Role"/>
+    
+
+
+    <!-- http://purl.org/nemo/gufo#SubKind -->
+
+    <owl:Class rdf:about="http://purl.org/nemo/gufo#SubKind"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://evasao.com#Aluno -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Aluno">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#ApoioFamiliar -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#ApoioFamiliar">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Compromisso -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Compromisso">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#CondiesEcnomicas -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#CondiesEcnomicas">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Curso -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Curso">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#EstadoCivil -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#EstadoCivil">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#EstruturaOrganizacional -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#EstruturaOrganizacional">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#EvasoEscolar -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#EvasoEscolar">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Mixin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#ExignciasDeTrabalho -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#ExignciasDeTrabalho">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#FatoresExternos -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#FatoresExternos">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#FormaDeIngresso -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#FormaDeIngresso">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Mixin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Gnero -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Gnero">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#IES -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#IES">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Idade -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Idade">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Infraestrutura -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Infraestrutura">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Matricula -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Matricula">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Me -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Me">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#ModalidadeDeEnsino -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#ModalidadeDeEnsino">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#PhaseMixin"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Objetivos -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Objetivos">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Pai -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Pai">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#SubKind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Pessoa -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Pessoa">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Professor -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Professor">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Raa -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Raa">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Renda -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Renda">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Responsvel -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Responsvel">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#SituaoDaMatricula -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#SituaoDaMatricula">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Phase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#TempoDeEstudo -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#TempoDeEstudo">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Turno -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Turno">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Kind"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#Universidade -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#Universidade">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#rea -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#rea">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://evasao.com#tempoDeEstudoHasFatoresExternos -->
+
+    <owl:NamedIndividual rdf:about="http://evasao.com#tempoDeEstudoHasFatoresExternos">
+        <rdf:type rdf:resource="http://purl.org/nemo/gufo#ComparativeRelationshipType"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://evasao.com#Aluno">
+        <rdfs:label xml:lang="en">Aluno</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#ApoioFamiliar">
+        <rdfs:label xml:lang="en">Apoio Familiar</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Compromisso">
+        <rdfs:label xml:lang="en">Compromisso</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#CondiesEcnomicas">
+        <rdfs:label xml:lang="en">Condi��es Ec�nomicas</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Curso">
+        <rdfs:label xml:lang="en">Curso</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#EstadoCivil">
+        <rdfs:label xml:lang="en">Estado civil</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#EstruturaOrganizacional">
+        <rdfs:label xml:lang="en">Estrutura Organizacional</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#EvasoEscolar">
+        <rdfs:label xml:lang="en">Evas�o Escolar</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#ExignciasDeTrabalho">
+        <rdfs:label xml:lang="en">Exig�ncias de Trabalho</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#FatoresExternos">
+        <rdfs:label xml:lang="en">Fatores Externos</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#FormaDeIngresso">
+        <rdfs:label xml:lang="en">Forma de Ingresso</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Gnero">
+        <rdfs:label xml:lang="en">G�nero</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#IES">
+        <rdfs:label xml:lang="en">IES</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Idade">
+        <rdfs:label xml:lang="en">Idade</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Infraestrutura">
+        <rdfs:label xml:lang="en">Infraestrutura</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Matricula">
+        <rdfs:label xml:lang="en">Matricula</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Me">
+        <rdfs:label xml:lang="en">M�e</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#ModalidadeDeEnsino">
+        <rdfs:label xml:lang="en">Modalidade de ensino</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Objetivos">
+        <rdfs:label xml:lang="en">Objetivos</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Pai">
+        <rdfs:label xml:lang="en">Pai</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Pessoa">
+        <rdfs:label xml:lang="en">Pessoa</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Professor">
+        <rdfs:label xml:lang="en">Professor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Raa">
+        <rdfs:label xml:lang="en">Ra�a</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Renda">
+        <rdfs:label xml:lang="en">Renda</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Responsvel">
+        <rdfs:label xml:lang="en">Respons�vel</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#SituaoDaMatricula">
+        <rdfs:label xml:lang="en">Situa��o da Matricula</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#TempoDeEstudo">
+        <rdfs:label xml:lang="en">Tempo de estudo</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Turno">
+        <rdfs:label xml:lang="en">Turno</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#Universidade">
+        <rdfs:label xml:lang="en">Universidade</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://evasao.com#rea">
+        <rdfs:label xml:lang="en">�rea</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
